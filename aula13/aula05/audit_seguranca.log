@@ -1,0 +1,9 @@
+===== Auditoria de Seguranca - Fri Aug  7 10:26:54 PM UTC 2026 =====
+
+--- 3 tentativas SEM chave de API ---
+Tentativa 1 (sem x-api-key) -> HTTP 401 | {"erro":"Acesso nao autorizado. Header 'x-api-key' invalido ou ausente."}
+Tentativa 2 (sem x-api-key) -> HTTP 401 | {"erro":"Acesso nao autorizado. Header 'x-api-key' invalido ou ausente."}
+Tentativa 3 (sem x-api-key) -> HTTP 401 | {"erro":"Acesso nao autorizado. Header 'x-api-key' invalido ou ausente."}
+
+--- 1 tentativa COM chave valida ---
+Tentativa 4 (com chave valida) -> HTTP 200 | [{"id":1,"nome":"Carlos Silva","cnh":"12345678900","categoria":"E","ativo":true},{"id":2,"nome":"Joao Pedro","cnh":"11122233344","categoria":"B","ativo":true}]

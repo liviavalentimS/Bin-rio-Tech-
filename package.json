@@ -1,0 +1,22 @@
+{
+  "name": "binario_tech",
+  "version": "1.0.0",
+  "description": "",
+  "main": "servidor_check.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liviavalentimS/Bin-rio-Tech-.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/liviavalentimS/Bin-rio-Tech-/issues"
+  },
+  "homepage": "https://github.com/liviavalentimS/Bin-rio-Tech-#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

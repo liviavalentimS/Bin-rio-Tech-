@@ -32,6 +32,25 @@ const manutencaoController = {
     }
   },
 
+  // Buscar por Placa (busca parcial, case-insensitive)
+  buscarPorPlaca: async (req, res) => {
+    try {
+      const { placa } = req.query;
+
+      if (!placa) {
+        return res.status(400).json({ erro: "Informe a placa para busca." });
+      }
+
+      const resultados = await Manutencao.find({
+        veiculoPlaca: { $regex: placa, $options: 'i' }
+      }).sort({ createdAt: -1 });
+
+      res.status(200).json(resultados);
+    } catch (erro) {
+      res.status(500).json({ erro: "Erro ao buscar manutenções por placa." });
+    }
+  },
+
   // Atualizar Status por ID
   atualizarStatus: async (req, res) => {
     try {
@@ -51,6 +70,28 @@ const manutencaoController = {
       res.status(200).json(atualizado);
     } catch (erro) {
       res.status(400).json({ erro: "Erro ao atualizar registro.", detalhe: erro.message });
+    }
+  },
+
+  // Adicionar Peça a uma Manutenção Existente ($push)
+  adicionarPeca: async (req, res) => {
+    try {
+      const { id } = req.params;
+      const novaPeca = req.body;
+
+      const atualizado = await Manutencao.findByIdAndUpdate(
+        id,
+        { $push: { pecasSubstituidas: novaPeca } },
+        { new: true, runValidators: true }
+      );
+
+      if (!atualizado) {
+        return res.status(404).json({ erro: "Registro de manutenção não encontrado." });
+      }
+
+      res.status(200).json(atualizado);
+    } catch (erro) {
+      res.status(400).json({ erro: "Erro ao adicionar peça.", detalhe: erro.message });
     }
   },
 

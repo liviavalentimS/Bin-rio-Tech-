@@ -1,0 +1,34 @@
+===== Execução iniciada em 2026-08-07 01:13:34 =====
+
+[PASSO 1] Cadastrando veículo 1 (Volvo FH 540)...
+Status: 201
+Body: {"id":3,"placa":"KLL-9090","montadora":"Volvo","modelo":"FH 540","status":"DISPONIVEL"}
+
+Veículo 1 cadastrado com sucesso. ID: 3 (status 201)
+
+[PASSO 2] Cadastrando veículo 2 (Scania R450)...
+Status: 201
+Body: {"id":4,"placa":"QWE-4321","montadora":"Scania","modelo":"R450","status":"DISPONIVEL"}
+
+Veículo 2 cadastrado com sucesso. ID: 4 (status 201)
+
+[PASSO 3] Atualizando status do veículo ID 3 para 'EM_ROTA'...
+Status: 200
+Body: {"mensagem":"Status atualizado com sucesso!","veiculo":{"id":3,"placa":"KLL-9090","montadora":"Volvo","modelo":"FH 540","status":"EM_ROTA"}}
+
+Veículo ID 3 atualizado (status HTTP 200)
+
+[PASSO 4] Deletando veículo ID 4...
+Status: 200
+Body: {"mensagem":"Veiculo ID 4 removido com sucesso."}
+
+Veículo ID 4 deletado (status HTTP 200)
+
+
+===== RESUMO =====
+
+Veículo cadastrado e atualizado : ID 3 (status PATCH: 200)
+
+Veículo cadastrado e deletado   : ID 4 (status DELETE: 200)
+
+===== Execução finalizada em 2026-08-07 01:13:34 =====
