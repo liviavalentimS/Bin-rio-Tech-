@@ -13,6 +13,6 @@ module.exports = (req, res, next) => {
     req.usuario = jwt.verify(token, process.env.JWT_SECRET);
     next();
   } catch (erro) {
-    return res.status(401).json({ erro: 'Token inválido ou expirado.' });
+    return res.status(403).json({ erro: 'Token inválido ou expirado.' });
   }
 };
