@@ -1,0 +1,13 @@
+=== Início do teste CRUD - qui 15 out 2026 14:14:57 -03 ===
+--- 1) Cadastrando veículo 1 ---
+ID do veículo 1: 
+
+--- 2) Cadastrando veículo 2 ---
+ID do veículo 2: 
+
+--- 3) Atualizando status do veículo  para 'EM_ROTA' ---
+
+--- 4) Deletando veículo  ---
+
+
+=== Fim do teste CRUD - qui 15 out 2026 14:14:57 -03 ===
