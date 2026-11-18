@@ -18,4 +18,3 @@ app.get('/api/v1/versao', (req, res) => {
 app.listen(PORT, () => {
   console.log(`[Binário Tech] Aplicação CI/CD ativa na porta ${PORT}`);
 });
-// teste hook
